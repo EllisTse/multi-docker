@@ -20,4 +20,4 @@ after_success:
   - docker push a5567799a/multi-client
   - docker push a5567799a/multi-nginx
   - docker push a5567799a/multi-server
-  - docker push a5567799a/multi-worker
+  - docker push a5567799a/multi-worker 
