@@ -3,16 +3,16 @@ services:
   - docker
 
 before_install:
-  - docker build -t ellis/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t a5567799a/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true ellis/react-test npm test
+  - docker run -e CI=true a5567799a/react-test npm test
 
 after_success:
-  - docker build -t ellis/multi-client ./client
-  - docker build -t ellis/multi-nginx ./nginx
-  - docker build -t ellis/multi-server ./server
-  - docker build -t ellis/multi-worker ./worker
+  - docker build -t a5567799a/multi-client ./client
+  - docker build -t a5567799a/multi-nginx ./nginx
+  - docker build -t a5567799a/multi-server ./server
+  - docker build -t a5567799a/multi-worker ./worker
  # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
